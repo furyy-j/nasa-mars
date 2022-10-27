@@ -1,0 +1,69 @@
+<div class="cameras">
+  <div class="container">
+    <form [formGroup]="form">
+      <div class=" t-a-center h2 col-black mb-5">Cameras:</div>
+      <div class="cameras-group">
+        <mat-button-toggle-group
+          formControlName="camera"
+          class="cameras-group d-flex btn-group"
+          name="ingredients" aria-label="Ingredients">
+          <mat-button-toggle
+            *ngFor="let camera of cameras"
+            class="btn-primary  btn-md mr-5 mb-3"
+            [value]="camera.code"
+            (click)="cameraChange.emit(camera)">
+            {{camera.name}}
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <div class="mars-time ">
+        <div class="mars-time-container">
+          <div class="mb-5">
+            <mat-button-toggle-group class="time-group btn-group"
+                                     name="fontStyle" aria-label="Font Style">
+              <mat-button-toggle class="time-btn h3 left-time  btn-md"
+                                 (click)="changeMarsTime(marsTime)"
+                                 [checked]="marsTime"
+                                 [value]="marsTime">Sol
+              </mat-button-toggle>
+              <mat-button-toggle class="time-btn h3 right-time   btn-md"
+                                 (click)="changeMarsTime(marsTime)"
+                                 [checked]="!marsTime"
+                                 [value]="!marsTime">Date
+              </mat-button-toggle>
+            </mat-button-toggle-group>
+
+          </div>
+          <div class="mars-time-info d-flex">
+            <div class="mr-3">
+              <svg-icon src="assets/icons/warn.svg"></svg-icon>
+            </div>
+            <div class="time-info-label col-gray">
+              Photos are organized by the sol (Martian rotation or day) on which they were taken,
+              counting up from the rover's landing date. A photo taken on Curiosity's 1000th Martian sol exploring Mars,
+              for example, will have a sol attribute of 1000. If instead you prefer to search by the Earth date on
+              which a photo was taken, you can do that, too.
+            </div>
+          </div>
+          <div class="mt-3">
+            <div class="d-flex w-100" *ngIf="marsTime">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Sol</mat-label>
+                <input type="number" matInput placeholder="Sol" class="form-control" formControlName="sol">
+              </mat-form-field>
+            </div>
+            <div class="w-100" *ngIf="!marsTime">
+              <mat-form-field appearance="fill" class="date-picker">
+                <mat-label>Choose a date</mat-label>
+                <input class="date-input" matInput [matDatepicker]="picker" formControlName="earth_date">
+                <mat-hint>YYYY/MM/DD</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

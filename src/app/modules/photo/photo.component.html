@@ -1,0 +1,20 @@
+<div class="photos" *ngIf="photos">
+  <div class=" t-a-center h2 col-black mb-5">Photos:</div>
+  <div class="container">
+    <div class="d-flex fw-wrap jc-c">
+      <div class="photos-card mr-1 mb-1" *ngFor="let photo of photos; trackBy: trackByFn">
+        <div class="img-container">
+          <img class=" item-img" [src]="photo.img_src" alt="">
+          <div class="overlay">
+            <div class="text">{{photo.camera.full_name}}</div>
+          </div>
+        </div>
+    </div>
+  </div>
+    <div class="photos-card m-auto" *ngIf="photos.length === 25">
+      <button mat-button class=" btn-search btn-md h3 color-white mt-3" [disabled]="loading"
+              (click)="loadMore.emit()">Load More...
+      </button>
+    </div>
+</div>
+</div>

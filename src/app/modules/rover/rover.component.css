@@ -1,0 +1,27 @@
+@import "../../core/scss/styles.scss";
+@import "../../core/scss/flex.scss";
+@import "../../core/scss/margins.scss";
+
+.main-container {
+  height: 609px;
+}
+
+/*MOBILE*/
+
+@media only screen and (max-width: 426px) {
+  .main-container {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .rovers-select {
+    margin-top: 1rem;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .rovers-select-img {
+    width: 100%;
+  }
+
+}

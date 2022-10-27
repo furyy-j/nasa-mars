@@ -1,0 +1,59 @@
+@import "../../core/scss/styles.scss";
+@import "../../core/scss/margins.scss";
+@import "../../core/scss/flex.scss";
+
+.photos {
+  margin-top: 4.5rem;
+}
+
+.photos-card {
+  max-width: 425px;
+  width: 100%;
+}
+
+.img-container {
+  position: relative;
+  height: 100%;
+}
+
+.item-img {
+  border-radius: 16px;
+  max-width: 425px;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  border-radius: 16px;
+  background: linear-gradient(0deg, rgba(230, 103, 76, 0.8), rgba(230, 103, 76, 0.8));
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

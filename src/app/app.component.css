@@ -1,0 +1,27 @@
+@import "core/scss/flex.scss";
+@import "core/scss/paddings.scss";
+@import "core/scss/margins.scss";
+@import "core/scss/styles.scss";
+
+.page {
+  background: #FFFFFF;
+  max-width: 1920px;
+}
+
+/*MAIN*/
+.main {
+  width: 100%;
+  background-image: url("../assets/images/main-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.empty {
+  height: 100px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+

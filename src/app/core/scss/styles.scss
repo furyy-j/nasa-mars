@@ -1,0 +1,178 @@
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.container {
+  max-width: 1304px;
+  margin: 0 auto;
+}
+
+.h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.color-white {
+  color: #FFFFFF;
+}
+
+.col-black {
+  color: #212121;
+}
+
+.col-gray {
+  color: #8E8E8E;
+}
+
+.d-block {
+  display: block;
+}
+
+.t-a-center {
+  text-align: center;
+}
+
+.btn-primary {
+  background: #F9D6CE;
+  border-radius: 100px;
+  color: #E6674C;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid #FFFFFF !important;
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  color: #FFFFFF;
+}
+
+.btn-secondary.mat-button-toggle-checked {
+  background: #FFFFFF;
+  color: #CF5D45;
+}
+
+.btn-primary.mat-button-toggle-checked {
+  background: #E6674C;
+  color: #FFFFFF;
+}
+
+.time-btn.mat-button-toggle-checked {
+  background: #E6674C;
+  color: #FFFFFF;
+}
+
+.btn-search {
+  width: 100%;
+  background: #E6674C;
+  border-radius: 16px;
+  text-align: center;
+}
+.btn-search:disabled {
+  cursor: not-allowed;
+  background: #CACACA;
+  color: #FFFFFF;
+}
+.btn-search:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #E6674C;
+}
+
+
+.btn-lg {
+  width: 100%;
+  max-width: 408px;
+  padding: 1.625rem;
+}
+
+.btn-md {
+  padding: 1.5rem 3rem;
+}
+
+.btn-group {
+  border: 0;
+}
+
+.mat-button-toggle-group {
+  display: block;
+  overflow: inherit;
+}
+
+.mars-time-container {
+  max-width: 632px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .container {
+    margin: 0 40px;
+  }
+}
+
+/*LAPTOP*/
+@media only screen and (max-width: 1024px) {
+  .btn-lg {
+    max-width: 360px;
+    padding: 1.4rem;
+  }
+}
+
+/*TABLET*/
+
+@media only screen and (max-width: 768px) {
+  .btn-lg {
+    max-width: 300px;
+    padding: 1rem;
+  }
+}
+
+/*MOBILE*/
+
+@media only screen and (max-width: 426px) {
+  body {
+    font-size: 14px;
+  }
+  .h1 {
+    font-size: 38px;
+  }
+  .container {
+    margin: 0 20px;
+  }
+
+  .mars-time-container {
+    max-width: 350px;
+
+  }
+
+  .btn-lg {
+    padding: 0.8rem;
+  }
+
+  .btn-md {
+    padding: 1rem 2rem;
+  }
+}

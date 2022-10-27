@@ -1,0 +1,31 @@
+<div class="page">
+	<form [formGroup]="form">
+		<div class="main">
+			<nm-rover
+					(roverChange)="roverChanged($event)"
+					formControlName="rover"
+			></nm-rover>
+		</div>
+		<nm-camera
+				[form]="form"
+				[cameras]="filteredCameras"
+				(cameraChange)="changeCamera($event)"
+		></nm-camera>
+		<div class="mars-time-container">
+			<button mat-button class=" btn-search btn-md h3 color-white mb-3" [disabled]="form.invalid || loading"
+					(click)="getImage('search')">Search
+			</button>
+		</div>
+	</form>
+	<nm-photo
+			[photos]="photos"
+			(loadMore)="loadPhotos()"
+	></nm-photo>
+	<div *ngIf="!photos?.length && !loading">
+		<div class="h1 mt-3 t-a-center">Nothing found</div>
+		<nm-empty class="d-flex-center"></nm-empty>
+	</div>
+	<nm-lottie-loader class="loader" *ngIf="loading"></nm-lottie-loader>
+</div>
+
+

@@ -1,0 +1,20 @@
+<div class="main-container container d-flex-center">
+  <div class="rovers-select w-50">
+    <div class="h1 color-white mb-3">Rovers:</div>
+    <mat-button-toggle-group class="btn-group d-block" name="favoriteColor" aria-label="Favorite Color">
+      <mat-button-toggle *ngFor="let rover of rovers"
+                         [value]="rover.code"
+                         [checked]="selected?.code === rover.code"
+                         class="btn-secondary btn-lg rover-btn mb-3 d-block h3 "
+                         (click)="changeRover(rover)"
+      >{{rover.name}}</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <div class="rovers-select-img w-50">
+    <div *ngIf="!roverImg" class="h1 color-white ml-3">Choose rover</div>
+    <div *ngIf="roverImg">
+      <img [src]="roverImg" class="w-100" alt="">
+    </div>
+  </div>
+</div>
+
